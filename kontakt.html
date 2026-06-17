@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kontakt — Avanza</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+.kontakt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.info-items { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+.info-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 20px; background: var(--card-bg);
+  border: 1px solid var(--border); border-radius: 12px; transition: border-color 0.2s;
+}
+.info-item:hover { border-color: rgba(230,48,18,0.25); }
+.info-icon {
+  width: 40px; height: 40px; border-radius: 10px; background: var(--grad);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.info-label { font-size: 0.75rem; font-weight: 600; color: var(--grey); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+.info-val { font-size: 0.95rem; font-weight: 500; }
+.info-val a { color: var(--white); text-decoration: none; transition: color 0.2s; }
+.info-val a:hover { color: var(--orange); }
+
+.form-card {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 20px; padding: 48px 40px;
+}
+.form-card h3 { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 28px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--grey); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; padding: 12px 16px; background: rgba(255,255,255,0.04);
+  border: 1.5px solid var(--border); border-radius: 10px;
+  color: var(--white); font-family: 'Inter', sans-serif; font-size: 0.95rem;
+  transition: border-color 0.2s; outline: none;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color: var(--orange);
+  background: rgba(232,101,10,0.05);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select option { background: var(--dark); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-submit { width: 100%; padding: 14px; font-size: 1rem; font-weight: 700; cursor: pointer; border: none; font-family: 'Inter', sans-serif; margin-top: 8px; }
+
+@media (max-width: 900px) {
+  .kontakt-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-card { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Razgovarajmo</span>
+    <h1>Rast počinje <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">razgovorom</span></h1>
+    <p>Zakažite besplatne konzultacije s našim timom i napravimo prve pametne poteze, zajedno.</p>
+  </div>
+</div>
+
+<div id="marquee"></div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="kontakt-grid">
+      <!-- INFO -->
+      <div class="fade-up">
+        <span class="eyebrow">Kontakt informacije</span>
+        <h2 class="section-title" style="margin-bottom:8px;">Tu smo za <span class="accent">Vas</span></h2>
+        <p style="color:var(--grey);font-size:.95rem;margin-bottom:8px;">Pošaljite nam poruku ili nas kontaktirajte direktno. Odgovaramo u roku 24 sata.</p>
+        <div class="info-items">
+          <div class="info-item">
+            <div class="info-icon">✉</div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-val"><a href="mailto:ana@avanza.hr">ana@avanza.hr</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <div class="info-label">Telefon</div>
+              <div class="info-val"><a href="tel:+385989114147">+385 98 911 4147</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">🕐</div>
+            <div>
+              <div class="info-label">Radno vrijeme</div>
+              <div class="info-val">Pon – Pet, 09:00 – 17:00</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <div class="info-label">Lokacija</div>
+              <div class="info-val">Zagreb, Hrvatska</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="form-card fade-up">
+        <h3>Pošaljite nam poruku</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ime</label>
+            <input type="text" placeholder="Vaše ime" />
+          </div>
+          <div class="form-group">
+            <label>Prezime</label>
+            <input type="text" placeholder="Vaše prezime" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="vas@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Kompanija</label>
+          <input type="text" placeholder="Naziv kompanije" />
+        </div>
+        <div class="form-group">
+          <label>Zanima me</label>
+          <select>
+            <option value="">Odaberite uslugu...</option>
+            <option>Marketing</option>
+            <option>Kreativa</option>
+            <option>Strategija</option>
+            <option>Growth</option>
+            <option>Sve usluge</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Poruka</label>
+          <textarea placeholder="Recite nam nešto o Vašem projektu..."></textarea>
+        </div>
+        <a href="mailto:ana@avanza.hr" class="btn-primary form-submit" style="justify-content:center;">Pošaljite poruku &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="shared.js"></script>
+<script>
+  renderNav('kontakt.html');
+  renderFooter();
+  document.getElementById('marquee').innerHTML = renderMarquee();
+  initAnimations();
+</script>
+</body>
+</html>

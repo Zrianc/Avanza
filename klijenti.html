@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Klijenti — Avanza</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+.clients-grid { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 80px; }
+.client-pill {
+  padding: 13px 26px; border: 1px solid var(--border); border-radius: 100px;
+  font-size: 0.9rem; font-weight: 600; color: var(--grey);
+  background: var(--card-bg); transition: all 0.2s; cursor: default;
+}
+.client-pill:hover { border-color: rgba(230,48,18,0.4); color: var(--white); background: rgba(230,48,18,0.08); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.testimonial {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: 16px; padding: 36px 32px; transition: all 0.3s;
+}
+.testimonial:hover { border-color: rgba(230,48,18,0.2); transform: translateY(-4px); }
+.stars { display: flex; gap: 4px; margin-bottom: 20px; color: #f59e0b; font-size: 0.9rem; }
+.testimonial-text { color: var(--light); font-size: 0.95rem; line-height: 1.8; margin-bottom: 28px; font-style: italic; }
+.author { display: flex; align-items: center; gap: 14px; }
+.avatar {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--grad);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-weight: 800; color: white; font-size: 1rem; flex-shrink: 0;
+}
+.author-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; }
+.author-role { font-size: 0.78rem; color: var(--grey); }
+@media (max-width: 900px) { .testimonials-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Naši klijenti</span>
+    <h1>Brendovi koji nam <span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">vjeruju</span></h1>
+    <p>Ponosni smo na dugoročne odnose s klijentima koji su prepoznali vrijednost strateškog pristupa marketingu.</p>
+  </div>
+</div>
+
+<div id="marquee"></div>
+
+<!-- KLIJENTI -->
+<section class="section">
+  <div class="section-inner">
+    <div class="fade-up" style="margin-bottom:40px;">
+      <span class="eyebrow">Samo neki Avanzini klijenti</span>
+      <h2 class="section-title">S kim <span class="accent">surađujemo</span></h2>
+    </div>
+    <div class="clients-grid fade-up">
+      <div class="client-pill">Botanist</div>
+      <div class="client-pill">Pablo's</div>
+      <div class="client-pill">Sundial</div>
+      <div class="client-pill">Escont Partners</div>
+      <div class="client-pill">Svibanj</div>
+      <div class="client-pill">Medikol</div>
+      <div class="client-pill">4RW</div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="fade-up" style="margin-bottom:40px;">
+      <span class="eyebrow">Client feedback</span>
+      <h2 class="section-title">Ne vjerujte samo <span class="accent">nama</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Avanza je napravila izvanredan posao u redesignu naše prisutnosti i produkciji kampanje. Rezultati su nevjerojatni — tim koji zna što radi."</p>
+        <div class="author">
+          <div class="avatar">L</div>
+          <div><div class="author-name">Leyla Boyer</div><div class="author-role">CEO · Heboni</div></div>
+        </div>
+      </div>
+      <div class="testimonial fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Marketing je i umjetnost i znanost, i Avanza je majstor u obome. Bez njihove pomoći naše kampanje ne bi dostigle razine koje smo postigli."</p>
+        <div class="author">
+          <div class="avatar">S</div>
+          <div><div class="author-name">Shiv Krause</div><div class="author-role">Marketing Director · Bueno</div></div>
+        </div>
+      </div>
+      <div class="testimonial fade-up">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Pravo iskustvo pune usluge. Avanza je bila profesionalni partner od prvog dana. Razumjeli su viziju naše kompanije i vodili fantastičan rebranding."</p>
+        <div class="author">
+          <div class="avatar">B</div>
+          <div><div class="author-name">Brendon Ball</div><div class="author-role">Brand Manager · Softy</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" style="text-align:center;">
+  <div class="section-inner">
+    <span class="eyebrow">Pridružite se</span>
+    <h2 class="section-title fade-up" style="margin:0 auto 20px;">Postanite naš <span class="accent">sljedeći uspjeh</span></h2>
+    <p class="fade-up" style="color:var(--grey);font-size:1.05rem;max-width:480px;margin:0 auto 36px;">Razgovarajmo o tome kako Avanza može pomoći Vašem brendu da raste.</p>
+    <div class="fade-up"><a href="kontakt.html" class="btn-primary">Kontaktirajte nas &rarr;</a></div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="shared.js"></script>
+<script>
+  renderNav('klijenti.html');
+  renderFooter();
+  document.getElementById('marquee').innerHTML = renderMarquee();
+  initAnimations();
+</script>
+</body>
+</html>

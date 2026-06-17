@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Usluge — Avanza</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+.usluge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border-radius: 20px; overflow: hidden; }
+.usluga-card {
+  background: var(--card-bg); padding: 56px 48px; position: relative; overflow: hidden;
+  transition: background 0.3s;
+}
+.usluga-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--grad); opacity: 0; transition: opacity 0.3s;
+}
+.usluga-card:hover { background: #1e1e1e; }
+.usluga-card:hover::before { opacity: 1; }
+.usluga-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 2.5px; color: var(--orange); margin-bottom: 20px; }
+.usluga-title { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 16px; }
+.usluga-desc { color: var(--grey); font-size: 1rem; line-height: 1.8; margin-bottom: 28px; }
+.usluga-features { list-style: none; }
+.usluga-features li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.875rem; color: rgba(255,255,255,0.75);
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+}
+.usluga-features li:last-child { border-bottom: none; }
+.usluga-features li::before { content: '→'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+.usluga-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 0.875rem; font-weight: 600; color: white;
+  text-decoration: none; opacity: 0.5; transition: opacity 0.2s;
+  margin-top: 28px;
+}
+.usluga-card:hover .usluga-link { opacity: 1; }
+
+@media (max-width: 900px) { .usluge-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow">Avanzin stil</span>
+    <h1>Personalizirana marketinška<br><span style="background:var(--grad-text);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">rješenja</span></h1>
+    <p>Rast počinje razumijevanjem. Svaki brend ima ritam, energiju i cilj, a mi ih spajamo kroz strategiju, sadržaj i analitiku.</p>
+  </div>
+</div>
+
+<div id="marquee"></div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="usluge-grid">
+      <div class="usluga-card fade-up">
+        <div class="usluga-num">01</div>
+        <div class="usluga-title">Marketing</div>
+        <p class="usluga-desc">Naš pristup kombinira podatke, strategiju i emociju kako bi Vaš brend postao nešto o čemu se priča, dijeli i pamti.</p>
+        <ul class="usluga-features">
+          <li>Upravljanje društvenim mrežama</li>
+          <li>Plaćene kampanje (Meta, Google)</li>
+          <li>Email marketing</li>
+          <li>Influencer marketing</li>
+          <li>Analitika i izvještavanje</li>
+        </ul>
+        <a href="kontakt.html" class="usluga-link">Zatraži ponudu &rarr;</a>
+      </div>
+      <div class="usluga-card fade-up">
+        <div class="usluga-num">02</div>
+        <div class="usluga-title">Kreativa</div>
+        <p class="usluga-desc">Naša kreativa je miks profesionalnog i prirodnog, kako bi se istovremeno gradili kredibilitet i povezanost publike s brendom.</p>
+        <ul class="usluga-features">
+          <li>Vizualni identitet i branding</li>
+          <li>Foto i video produkcija</li>
+          <li>Dizajn oglasa i materijala</li>
+          <li>Copywriting i storytelling</li>
+          <li>Grafički dizajn</li>
+        </ul>
+        <a href="kontakt.html" class="usluga-link">Zatraži ponudu &rarr;</a>
+      </div>
+      <div class="usluga-card fade-up">
+        <div class="usluga-num">03</div>
+        <div class="usluga-title">Strategija</div>
+        <p class="usluga-desc">Prije nego što krenemo stvarati, razumijemo — Vaše ciljeve, publiku i tržište. Na toj podlozi gradimo plan koji donosi rezultate.</p>
+        <ul class="usluga-features">
+          <li>Analiza tržišta i konkurencije</li>
+          <li>Definiranje ciljne publike</li>
+          <li>Strategija sadržaja</li>
+          <li>Pozicioniranje brenda</li>
+          <li>Dugoročni plan rasta</li>
+        </ul>
+        <a href="kontakt.html" class="usluga-link">Zatraži ponudu &rarr;</a>
+      </div>
+      <div class="usluga-card fade-up">
+        <div class="usluga-num">04</div>
+        <div class="usluga-title">Growth</div>
+        <p class="usluga-desc">Rast se ne događa slučajno. Mi ga gradimo analizom, optimizacijom, posvećenošću i sveobuhvatnošću.</p>
+        <ul class="usluga-features">
+          <li>Growth hacking strategije</li>
+          <li>Conversion rate optimizacija</li>
+          <li>A/B testiranje</li>
+          <li>SEO i organski rast</li>
+          <li>Retargeting kampanje</li>
+        </ul>
+        <a href="kontakt.html" class="usluga-link">Zatraži ponudu &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" style="text-align:center;">
+  <div class="section-inner">
+    <span class="eyebrow">Idemo zajedno</span>
+    <h2 class="section-title fade-up" style="margin:0 auto 20px;">Nije li vrijeme da <span class="accent">počnete rasti</span>?</h2>
+    <p class="fade-up" style="color:var(--grey);font-size:1.05rem;max-width:480px;margin:0 auto 36px;">Zakažite besplatne konzultacije i zajedno odredimo koji je pravi korak za Vaš brend.</p>
+    <div class="fade-up"><a href="kontakt.html" class="btn-primary">Besplatne konzultacije &rarr;</a></div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="shared.js"></script>
+<script>
+  renderNav('usluge.html');
+  renderFooter();
+  document.getElementById('marquee').innerHTML = renderMarquee();
+  initAnimations();
+</script>
+</body>
+</html>
